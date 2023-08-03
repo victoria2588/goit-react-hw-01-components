@@ -16,13 +16,9 @@ import {
 export const Profile = ({ user }) => {
   const {
     username,
-
     tag,
-
     location,
-
     avatar,
-
     stats: { followers, views, likes },
   } = user;
 
@@ -30,30 +26,21 @@ export const Profile = ({ user }) => {
     <ProfileContainer>
       <ProfileDescription>
         <ProfileImage src={avatar} alt={username} />
-
         <ProfileName>{username}</ProfileName>
-
         <ProfileTag>@{tag}</ProfileTag>
-
         <ProfileLocation>{location}</ProfileLocation>
       </ProfileDescription>
-
       <ProfileList>
         <ProfileItem>
           <ProfileSubtitle>Followers</ProfileSubtitle>
-
           <ProfileInfo>{followers}</ProfileInfo>
         </ProfileItem>
-
         <ProfileItem>
           <ProfileSubtitle>Views</ProfileSubtitle>
-
           <ProfileInfo>{views}</ProfileInfo>
         </ProfileItem>
-
         <ProfileItem>
           <ProfileSubtitle>Likes</ProfileSubtitle>
-
           <ProfileInfo>{likes}</ProfileInfo>
         </ProfileItem>
       </ProfileList>
